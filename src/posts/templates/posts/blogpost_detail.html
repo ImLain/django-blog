@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>{{ post.title }}</title>
+{% endblock title %}
+
+{% block content %}
+    <article class="post-detail">
+        <h1>{{ post.title }}</h1>
+        <img src="{{ post.thumbnail.url }}" alt="L'image de l'article">
+        <div>{{ post.content|linebreaks|safe }}</div>
+    </article>
+    
+{% endblock content %}
